@@ -5,13 +5,13 @@ import MyBooksTab from "./components/MyBooksTab";
 import RecommendationsTab from "./components/RecommendationsTab";
 import { useLikedBooks } from "./hooks/useLikedBooks";
 
-const TABS = [
-  { label: "Search", path: "/" },
-  { label: "My Books", path: "/my-books" },
-  { label: "Recommendations", path: "/recommendations" },
-];
-
 function NavTabs() {
+  const TABS = [
+    { label: "Search", path: "/" },
+    { label: "My Books", path: "/my-books" },
+    { label: "Recommendations", path: "/recommendations" },
+  ];
+
   const navigate = useNavigate();
   const location = useLocation();
   const currentIndex = TABS.findIndex((t) => t.path === location.pathname);
