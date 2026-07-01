@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { AppBar, Tabs, Tab, Container } from "@mui/material";
+import { AppBar, Tabs, Tab, Typography, Container } from "@mui/material";
 import SearchTab from "./components/SearchTab";
 import MyBooksTab from "./components/MyBooksTab";
 import RecommendationsTab from "./components/RecommendationsTab";
@@ -31,6 +31,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppBar position="static" color="default" sx={{ alignItems: "center" }}>
+        <Typography variant="h3" sx={{mb: 2}}>[{"\u05D0"}: aleph]</Typography>
         <NavTabs />
       </AppBar>
       <Container maxWidth="sm" sx={{ mt: 3 }}>
